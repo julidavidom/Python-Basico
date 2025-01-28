@@ -2,7 +2,7 @@
 
 Bienvenido a la **Introducción al funcionamiento Python**, donde descubrirás las características fundamentales de Python y cómo aprovecharlas al máximo.
 
----https://github.com/julidavidom/Python1/tree/main
+---
 
 # 🧑‍💻 **¿Cómo Funciona Python?**
 
