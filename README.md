@@ -449,7 +449,7 @@ for llave, valor in my_dict.items():
 - Prueban todos los caminos posibles, incluyendo ramificaciones, bucles y recursión.
 - Regression Testing: Pruebas de regresión para detectar problemas después de cambios.
 
-## 17 Excepciones 🚨
+## 16 Excepciones 🚨
 Las excepciones son comunes en programación y se utilizan para manejar errores.
 
 Manejo de Excepciones
