@@ -149,7 +149,7 @@ Claridad: Mejora la legibilidad del código.
 En esta sección, encontrarás un recorrido completo por los conceptos esenciales de la programación en Python. Desde los tipos de datos y operaciones matemáticas hasta estructuras de control e iteraciones, este material está diseñado tanto para principiantes como para programadores que deseen reforzar sus conocimientos. Todos los códigos están comentados para facilitar su comprensión y aplicación en proyectos reales.
 
 ---
-## 1. Tipos de datos básicos en programación 🧮
+## 1 Tipos de datos básicos en programación 🧮
 Los tipos de datos más comunes son:
 
 - **int**: Números enteros.
@@ -176,7 +176,7 @@ print(type(my_str))   # <class 'str'>
 ```
 
 ---
-## 2. Operaciones básicas en Python ➗
+## 2 Operaciones básicas en Python ➗
 Operaciones matemáticas comunes:
 
 ```python
@@ -191,7 +191,7 @@ Operaciones matemáticas comunes:
 ```
 
 ---
-## 3. Iteraciones en Python 🔁
+## 3 Iteraciones en Python 🔁
 Las iteraciones nos permiten repetir un proceso varias veces. Son fundamentales en la programación para realizar tareas repetitivas.
 
 ### 3.1 Puntos clave:
@@ -207,7 +207,7 @@ while contador < 10:
     contador = contador +1
 ```
 ---
-## 4. Representación de números flotantes en Python 🏞️
+## 4 Representación de números flotantes en Python 🏞️
 La representación de números flotantes (tipo float) en Python y otras computadoras puede ser sorprendentemente inexacta debido a la forma en que se manejan internamente.
 
 Ejemplo problemático:
@@ -611,7 +611,7 @@ raise ValueError("Este es un error personalizado")
 En esta sección, se presentan los algoritmos proporcionados, ordenados de menor a mayor complejidad, con el objetivo de que el lector entienda cómo cada programa contribuye al aprendizaje de Python básico
 
 ---
-## 1. break_continue.py 🔄
+### 1 break_continue.py 🔄
 Este script demuestra el uso de estructuras de control en Python, como bucles `for`,`break` y `continue`.
 
 El código imprime 'NA' 12 veces y luego 'HEY JUDE'.
@@ -629,7 +629,7 @@ if __name__ == '__main__':
 ```
 
 ---
-## 2. conditionals.py 🔄
+### 2 conditionals.py 🔄
 Programa que evalúa si un número ingresado por el usuario es mayor, menor o igual a 5.
 Este ejemplo introduce la estructura condicional **if-elif-else** en Python.
 
@@ -647,7 +647,7 @@ else:
 ```
 
 ---
-## 3. converter.py 💱
+### 3 converter.py 💱
 Convierte una cantidad de pesos colombianos a dólares según una tasa de cambio fija. Introduce el manejo de entrada de usuario y operaciones aritméticas.
 
 ```python
@@ -662,7 +662,7 @@ if __name__ == '__main__':
 ```
 
 ---
-## 4. dictionaries.py 📚
+### 4 dictionaries.py 📚
 Muestra cómo definir un diccionario, acceder a sus valores y recorrerlo con un bucle. Es útil para entender estructuras de datos clave-valor.
 
 ```python
@@ -683,7 +683,7 @@ if __name__ == '__main__':
 
 ```
 ---
-## 5. for.py 🔁
+### 5 for.py 🔁
 Ejemplo de uso de bucles for y while. Introduce la función range() y cómo generar listas con ella.
 
 ```python
@@ -707,7 +707,7 @@ for i in range(10):
 ```
 
 ---
-## 6. game.py 🎮
+### 6 game.py 🎮
 Este programa es un simple juego de adivinanza en el que el usuario debe adivinar un número aleatorio generado por el programa.
 
 Conceptos básicos de Python aplicados:
@@ -733,7 +733,7 @@ def run():
 ```
 
 ---
-## 7. loops.py 🔄
+### 7 loops.py 🔄
 Calcula y muestra las potencias de 2 hasta alcanzar un límite específico. Introduce el uso de bucles while y operaciones matemáticas.
 
 ```python
@@ -753,7 +753,7 @@ if __name__ == '__main__':
 ```
 
 ---
-## 8. palindrome.py 🔄
+### 8 palindrome.py 🔄
 Verifica si una palabra o frase es un palíndromo. Introduce el manejo de cadenas y operaciones de slicing.
 
 ```python
@@ -779,7 +779,7 @@ if __name__ == '__main__':
 ```
 
 ---
-## 9. password.py 🔒
+### 9 password.py 🔒
 Genera una contraseña aleatoria de 15 caracteres. Introduce el uso de listas, bucles for y la función random.choice.
 
 ```python
@@ -818,7 +818,7 @@ if __name__ == '__main__':
 
 ```
 ---
-## 10. prime_number.py 🔢
+### 10 prime_number.py 🔢
 Este programa verifica si un número es primo .
 Un numero es primo cuando el residuo de la divicion es 0 solo cuando se divide entre uno, y entre el mismo numero.
 
@@ -856,7 +856,7 @@ if __name__ == "__main__":
 
 ```
 ---
-## 11. recorrer_cadena.py 🔄
+### 11 recorrer_cadena.py 🔄
 Este programa toma una frase ingresada por el usuario y convierte cada carácter a mayúsculas.
 
 - Iteración sobre cadenas con un bucle for.
@@ -872,7 +872,7 @@ if __name__ == "__main__":
     run()
 ```
 
-## 12. aproximacion.py 📏
+### 12 aproximacion.py 📏
 Este programa encuentra la raíz cuadrada de un número usando aproximaciones sucesivas.
 Si el número no tiene una raíz exacta, se devuelve una aproximación con un margen de error (epsilon).
 
@@ -901,7 +901,7 @@ if __name__ == '__main__':
     find_square_root(number)
 ```
 ---
-## 13. busqueda_binaria.py 🔎
+### 13 busqueda_binaria.py 🔎
 Este programa calcula la raíz cuadrada de un número utilizando el método de búsqueda binaria. Si la raíz no es exacta, devuelve una aproximación con un margen de error (`epsilon`).
 
 Conceptos básicos en Python:
@@ -932,7 +932,7 @@ if __name__ == '__main__':
     find_binary_root(number)
 ```
 ---
-## 14. enumeracion_exhaustiva.py 🔍
+### 14 enumeracion_exhaustiva.py 🔍
 Este programa implementa el método de Enumeración Exhaustiva para encontrar la raíz cuadrada exacta de un número entero.
 
 Conceptos básicos en Python:
@@ -956,7 +956,7 @@ else:
     print(f"{target} does not have an exact square root")
 ```
 ---
-## 15. excepciones.py 🚨
+### 15 excepciones.py 🚨
 Manejo de excepciones en Python con `try-except`.
 
 Conceptos básicos abordados:
@@ -978,7 +978,7 @@ divisor = 0  # Error case (division by zero)
 print(divide_list_elements(lst, divisor))
 ```
 ---
-## 16. factorial.py 🔢
+### 16 factorial.py 🔢
 Cálculo del factorial de un número usando recursividad. Introduce el concepto de recursividad.
 
 ```python
@@ -992,7 +992,7 @@ n = int(input("Escribe un entero positivo: "))
 print(f"El factorial de {n} es {factorial(n)}")
 ```
 ---
-## 17. iteraciones.py 🔄
+### 17 iteraciones.py 🔄
 Este programa demuestra el uso de bucles anidados en Python mediante un contador de 0 a 99.
 Es ideal para aprender sobre estructuras de control, el funcionamiento de ciclos while anidados y la gestión de variables de control en iteraciones.
 
@@ -1011,7 +1011,7 @@ while outer_counter < 10:
     inner_counter = 0   # Resets the inner counter
 ```
 ---
-## 20. tres_metodos_numericos.py 📊
+### 18 tres_metodos_numericos.py 📊
 Implementa tres métodos para calcular la raíz cuadrada de un número: enumeración exhaustiva, aproximación y búsqueda binaria. Introduce diferentes enfoques para resolver un problema.
 
 ```python
@@ -1085,7 +1085,7 @@ if __name__ == "__main__":
     run()
 ```
 
-## 📝 Fuentes
+# 📝 Fuentes
 - Platzi
 - Python Documentation
 - W3Schools-
