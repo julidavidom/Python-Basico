@@ -267,7 +267,7 @@ print(len(texto))  # 21 (incluye los espacios)
 ## Slices
 Los slices permiten extraer partes de secuencias en objetos como strings, listas, tuplas. La sintaxis es ```[inicio:fin:paso]```, donde:
 
-plaintext```
+```plaintext
 - inicio:    índice donde comienza.
 - fin:       índice donde termina.
 - paso:      cada cuántos elementos obtiene datos.
