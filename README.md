@@ -1,5 +1,5 @@
 
-### **Bienvenido a este repositorio. Aquí comparto conceptos básicos que he adquirido en programación con Python, estos ejemplos simples pueden ser de gran utilidad en algoritmos más complejos. El material lo he adquirido  a través de cursos virtuales, bootcamps y proyectos personales.**
+Bienvenido a este repositorio. Aquí comparto conceptos básicos que he adquirido en programación con Python, estos ejemplos simples pueden ser de gran utilidad en algoritmos más complejos. El material lo he adquirido  a través de cursos virtuales, bootcamps y proyectos personales.
 ---
 
 # PARTE 1 - Introducción al funcionamiento Python 
