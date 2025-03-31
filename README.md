@@ -267,9 +267,11 @@ print(len(texto))  # 21 (incluye los espacios)
 ## Slices
 Los slices permiten extraer partes de secuencias en objetos como strings, listas, tuplas. La sintaxis es ```[inicio:fin:paso]```, donde:
 
-- inicio: índice donde comienza 
-- fin: índice donde termina
-- paso: cada cuántos elementos obtiene datos
+plaintext```
+- inicio:    índice donde comienza.
+- fin:       índice donde termina.
+- paso:      cada cuántos elementos obtiene datos.
+```
   
 Características importantes:
 
@@ -425,9 +427,9 @@ tupla_simple = (1,)  # Para tuplas de un elemento, se necesita la coma
 ```
 Operaciones permitidas:
 - Indexación y slicing.
-- Métodos count() e index().
+- Métodos ```count()```e ```index()```.
 - Operadores + (concatenación) y * (repetición)
-- Función len()
+- Función ```len()```
 
 Operaciones no permitidas:
 - append(), insert(), remove(), pop(), etc.
@@ -446,7 +448,7 @@ my_tuple += my_other_tuple
 print(my_tuple)  # (1, 'dos', True, 2, 3, 4)
 ```
 ## Diccionarios
-Los diccionarios almacenan pares clave-valor. Son mutables y no mantienen un orden.
+Los diccionarios almacenan pares ```clave-valor```. Son mutables y no mantienen un orden.
 
 Sintaxis básica:
 ```python
@@ -605,22 +607,22 @@ Resultado esperado:
 ```python
 x != 1.0
 ```
-Aunque en teoría 0.1 * 10 = 1.0, al intentar representarlo en una computadora en base binaria, se obtiene una pequeña imprecisión: 0.999999999999.
+Aunque en teoría ```0.1 * 10 = 1.0```, al intentar representarlo en una computadora en base binaria, se obtiene una pequeña imprecisión: ```0.999999999999```.
 
 **¿Por qué no se representan de manera exacta?**
 
-En las computadoras, los números flotantes no se pueden representar con total precisión. Esto ocurre porque algunos valores, como 0.1, no tienen una representación exacta en binario debido a las limitaciones de la cantidad de dígitos significativos que pueden ser almacenados.
+En las computadoras, los números flotantes no se pueden representar con total precisión. Esto ocurre porque algunos valores, como ```0.1```, no tienen una representación exacta en binario debido a las limitaciones de la cantidad de dígitos significativos que pueden ser almacenados.
 
 Representación binaria:
-- Cómo funciona: Los números se representan como secuencias de 0s y 1s en binario.
+- Cómo funciona: Los números se representan como secuencias de ```0 , 1 ```en binario.
 - El problema: Algunos números decimales no pueden ser representados exactamente en este formato.
 
 Ejemplos:
-- El número 0.625 tiene una representación exacta en binario: 101 * 2**-3.
-- Sin embargo, 0.1 no puede representarse de forma precisa. En su lugar, se aproxima a un valor cercano, lo que genera un error de representación.
+- El número ```0.625``` tiene una representación exacta en binario: ```101 * 2**-3.```
+- Sin embargo, ```0.1``` no puede representarse de forma precisa. En su lugar, se aproxima a un valor cercano, lo que genera un error de representación.
 
 Precisión en Python :
-Python utiliza 53 bits de precisión para manejar números flotantes en la mayoría de las implementaciones modernas.
+Python utiliza ```53 bits``` de precisión para manejar números flotantes en la mayoría de las implementaciones modernas.
 Esto significa que números como 0.1 son extremadamente cercanos a su valor real, pero nunca exactamente iguales.
 
 Ejemplo de resultado inesperado:
@@ -628,7 +630,7 @@ Ejemplo de resultado inesperado:
 0.1000000000000000055511151231257827021181583404541015625
 ```
 Buenas prácticas para trabajar con flotantes
-Debido a estas imprecisiones, no compares números flotantes con el operador ==. En su lugar, utiliza comparaciones aproximadas.
+Debido a estas imprecisiones, no compares números flotantes con el operador ```==```. En su lugar, utiliza comparaciones aproximadas.
 
 Ejemplo:
 ```python
@@ -637,7 +639,7 @@ abs(x - 1.0) < 1e-9  # Verifica si la diferencia es lo suficientemente pequeña
 ---
 # PARTE 4 - Algoritmos de Búsqueda
 ## Enumeración Exhaustiva
-- También conocido como "adivina y verifica", este método enumera todas las posibilidades.
+- También conocido como ```"adivina y verifica"```, este método enumera todas las posibilidades.
 - Es uno de los primeros algoritmos que debes probar.
 
 Ejemplo de código:
