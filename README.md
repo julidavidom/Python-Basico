@@ -2,7 +2,7 @@
 ### **Bienvenido a este repositorio. Aquí comparto conceptos básicos que he adquirido en programación con Python, estos ejemplos simples pueden ser de gran utilidad en algoritmos más complejos. El material lo he adquirido  a través de cursos virtuales, bootcamps y proyectos personales.**
 ---
 
-# PARTE 1 - Introducción al funcionamiento Python 🚀
+# PARTE 1 - Introducción al funcionamiento Python 
 Aquí aprenderás cómo funciona internamente este lenguaje interpretado, sus características clave y la diferencia entre lenguajes compilados e interpretados. Además, se incluyen códigos prácticos y explicaciones claras para que puedas comprender mejor cada concepto.
 
 ---
@@ -182,8 +182,7 @@ my_bool = True
 my_none = None
 my_str = "Hola"
 ```
-### Imprimiendo el tipo de una variable:
-
+Imprimiendo el tipo de una variable:
 ```python
 print(type(my_int))   # <class 'int'>
 print(type(my_float)) # <class 'float'>
@@ -238,8 +237,8 @@ if condición:
 else:
     # código a ejecutar si la condición es falsa
 ```
-También existe elif (else if) para múltiples condiciones:
 
+También existe elif (else if) para múltiples condiciones:
 ```python
 if edad < 13:
     print("Niño")
@@ -250,8 +249,8 @@ elif edad < 65:
 else:
     print("Adulto mayor")
 ```
-Las condiciones pueden ser más complejas usando operadores lógicos (and, or, not):
 
+Las condiciones pueden ser más complejas usando operadores lógicos (and, or, not):
 ```python
 tiene_licencia = True
 if edad >= 18 and tiene_licencia:
@@ -262,7 +261,6 @@ if edad >= 18 and tiene_licencia:
 Los strings son secuencias de caracteres  con formato Unicode. Python ofrece muchos métodos para manipularlos:
 
 Métodos útiles:
-
 ```plaintext
 upper():               convierte todo a mayúsculas
 lower():               convierte todo a minúsculas
@@ -275,16 +273,16 @@ join():                une elementos de una lista en un string
 find():                busca una subcadena y devuelve su posición
 len():                 devuelve la longitud
 ```
-Un emplo puede ser: 
-
+Un ejemplo puede ser: 
 ```python
 texto = "   Python es genial   "
 print(texto.strip())  # "Python es genial"
 print(texto.replace("genial", "poderoso"))  # "   Python es poderoso   "
 print(len(texto))  # 21 (incluye los espacios)
 ```
+---
 ## 7 Slices
-Los slices permiten extraer partes de secuencias (strings, listas, tuplas). La sintaxis es ```plaintext[inicio:fin:paso]```, donde:
+Los slices permiten extraer partes de secuencias en objetos como strings, listas, tuplas. La sintaxis es ```[inicio:fin:paso]```, donde:
 
 - inicio: índice donde comienza 
 - fin: índice donde termina
@@ -295,13 +293,10 @@ Características importantes:
 - Los índices pueden ser negativos (cuentan desde el final)
 - Si se omite inicio, comienza desde el principio
 - Si se omite fin, va hasta el final
-
-Un paso negativo recorre la secuencia en reversa
+- Un paso negativo recorre la secuencia en reversa
 
 Ejemplos avanzados:
-
-python
-Copy
+```python
 texto = "Programación en Python"
 
 # Primeras 5 letras
@@ -315,17 +310,17 @@ print(texto[::-1])  # "nohtyP ne nóicamargorP"
 
 # Últimas 6 letras
 print(texto[-6:])  # "Python"
-
-## 3 Iteraciones en Python 
+```
+## 8 Iteraciones en Python 
 Las iteraciones nos permiten repetir un proceso varias veces. Son fundamentales en la programación para realizar tareas repetitivas.
 Estructura básica:
 
-### 3.1 Puntos clave:
+### Puntos clave:
 - Las iteraciones se pueden anidar (escribir iteraciones dentro de otras).
 - **break** se utiliza para salir anticipadamente de una iteración.
 - Hay que tener cuidado con iteraciones infinitas.
 
-**Ejemplo**
+Ejemplo:
 ```python
 contador=0
 while contador < 10:
@@ -333,11 +328,261 @@ while contador < 10:
     contador = contador +1
 ```
 ---
-## 4 Representación de números flotantes en Python 🏞️
+## 9 Bucles
+Los bucles permiten ejecutar código repetidamente. Python tiene dos tipos principales:
+
+### Bucle while
+Ejecuta un bloque mientras una condición sea verdadera.
+
+Estructura:
+```python
+while condición:
+    # código a repetir
+```
+
+Ejemplo:
+```python
+contador = 0
+while contador < 5:
+    print(contador)
+    contador += 1
+```
+### Bucle for
+Itera sobre los elementos de una secuencia (lista, tupla, string, etc.) o cualquier objeto iterable.
+
+Estructura:
+```python
+for elemento in secuencia:
+    # código a ejecutar por cada elemento
+```
+Ejemplos:
+```python
+# Iterar sobre una lista
+frutas = ['manzana', 'banana', 'naranja']
+for fruta in frutas:
+    print(fruta.upper())
+
+# Iterar con range()
+for i in range(3):  # 0, 1, 2
+    print(i)
+
+# Iterar con índice y valor
+for indice, fruta in enumerate(frutas):
+    print(f"{indice}: {fruta}")
+```
+---
+## 10 Listas
+Las listas son colecciones ordenadas y mutables de elementos. Pueden contener diferentes tipos de datos.
+
+### Operaciones principales:
+
+Creación y acceso
+```python
+lista = [1, "dos", 3.0, True]
+print(lista[1])  # "dos" (los índices comienzan en 0)
+```
+Modificación
+```python
+lista[1] = 2  # Cambia "dos" por 2
+```
+
+### Métodos útiles
+```plaintext
+append(x):        añade x al final.
+insert(i, x):     inserta x en posición i.
+pop(i):           elimina y retorna elemento en posición i.
+remove(x):        elimina la primera ocurrencia de x.
+sort():           ordena la lista (modifica la original).
+sorted():         retorna una nueva lista ordenada.
+reverse():        invierte el orden.
+len():            longitud de la lista.
+count(x):         cuenta ocurrencias de x.
+index(x):         retorna índice de la primera ocurrencia de x.
+```
+
+Ejemplos:
+```python
+numeros = [3, 1, 4, 1, 5, 9]
+numeros.append(2)  # [3, 1, 4, 1, 5, 9, 2]
+numeros.remove(1)  # [3, 4, 1, 5, 9, 2]
+numeros.sort()  # [1, 2, 3, 4, 5, 9]
+```
+### Operaciones con listas
+```python
+# Concatenación
+lista1 = [1, 2]
+lista2 = [3, 4]
+combinada = lista1 + lista2  # [1, 2, 3, 4]
+
+# Repetición
+repetida = lista1 * 3  # [1, 2, 1, 2, 1, 2]
+
+# Slicing (igual que con strings)
+sub_lista = combinada[1:3]  # [2, 3]
+
+# List Comprehension
+double = [i * 2 for i in range(10)]
+print(double)  # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+```
+---
+## 11 Tuplas
+Las tuplas son similares a las listas pero son inmutables (no se pueden modificar después de creadas). Son más eficientes en memoria y tiempo de ejecución.
+
+Sintaxis:
+```python
+tupla = (1, 2, 3)
+tupla_simple = (1,)  # Para tuplas de un elemento, se necesita la coma
+```
+Operaciones permitidas:
+- Indexación y slicing.
+- Métodos count() e index().
+- Operadores + (concatenación) y * (repetición)
+- Función len()
+
+Operaciones no permitidas:
+- append(), insert(), remove(), pop(), etc.
+
+Ejemplo:
+```python
+my_tuple = (1, 'dos', True)
+print(my_tuple[0])  # 1
+
+# Las tuplas son inmutables
+# my_tuple[0] = 2  # TypeError
+
+# Concatenación de tuplas
+my_other_tuple = (2, 3, 4)
+my_tuple += my_other_tuple
+print(my_tuple)  # (1, 'dos', True, 2, 3, 4)
+```
+---
+## 12 Diccionarios
+Los diccionarios almacenan pares clave-valor. Son mutables y no mantienen un orden.
+
+Sintaxis básica:
+```python
+diccionario = {
+    "clave1": "valor1",
+    "clave2": "valor2"
+}
+```
+Operaciones principales:
+- Acceso:         ```diccionario["clave"]```
+- Modificación:   ```diccionario["clave"] = nuevo_valor```
+- Añadir:         ```diccionario[nueva_clave] = valor```
+- Eliminar:       ```del diccionario["clave"```] o ```diccionario.pop("clave")```
+
+Métodos útiles:
+```plaintext
+keys():              retorna las claves
+values():            retorna los valores
+items():             retorna pares (clave, valor)
+get(clave, default): obtiene valor o devuelve default si no existe
+update():            actualiza con otro diccionario
+popitem():           elimina y retorna un par (clave, valor)
+```
+
+Ejemplo completo:
+```python
+persona = {
+    "nombre": "Ana",
+    "edad": 30,
+    "ciudad": "Madrid"
+}
+
+# Acceso
+print(persona["nombre"])  # "Ana"
+
+# Modificación
+persona["edad"] = 31
+
+# Añadir nuevo campo
+persona["profesion"] = "Ingeniera"
+
+# Eliminar
+del persona["ciudad"]
+
+# Iterar
+for clave, valor in persona.items():
+    print(f"{clave}: {valor}")
+
+# Método get (evita KeyError)
+print(persona.get("telefono", "No disponible"))  # "No disponible"
+```
+
+Los dicccionarios tambien son objetos iterables dentro de python: 
+```python
+my_dict = {'David': 35, 'Erika': 32, 'Jaime': 50}
+print(my_dict['David'])  # 35
+
+# Iterar sobre diccionarios
+for key, value in my_dict.items():
+    print(key, value)
+```
+
+## 13 Funciones
+### Abstracción 
+No necesitas saber cómo se implementa algo, solo cómo manejarlo.
+
+### Descomposición 
+Permite dividir el código en componentes que colaboran entre sí. Piensa en mini programas que juntos forman un programa mayor.
+
+### Recursividad
+- Definición algorítmica: Utiliza el enfoque "divide y vencerás". Encuentra una solución base y luego itera para resolver el problema.
+- Definición programática: Una función que se llama a sí misma.
+
+Ejemplo: Factoriales
+```python
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+```
+
+Ejemplo: Fibonacci
+```python
+def fibonacci(n):
+    if n == 0 or n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)
+```
+
+### Funciones como Objetos
+- En Python, las funciones son "ciudadanos de primera clase". Esto significa que:
+- Tienen un tipo.
+- Se pueden pasar como argumentos a otras funciones.
+- Se pueden usar en expresiones.
+- Se pueden incluir en estructuras de datos como listas, tuplas, diccionarios, etc.
+
+Ejemplo: Pasar funciones como argumentos
+```python
+def multiply_by_two(n):
+    return n * 2
+
+def add_two(n):
+    return n + 2
+
+def apply_operation(f, numbers):
+    results = []
+    for number in numbers:
+        results.append(f(number))
+    return results
+
+nums = [1, 2, 3]
+print(apply_operation(multiply_by_two, nums))  # [2, 4, 6]
+print(apply_operation(add_two, nums))  # [3, 4, 5]
+```
+
+### Funciones Lambda
+```python
+add = lambda x, y: x + y
+print(add(2, 3))  # 5
+```
+---
+# Representación de números flotantes en Python
 La representación de números flotantes (tipo float) en Python y otras computadoras puede ser sorprendentemente inexacta debido a la forma en que se manejan internamente.
 
 Ejemplo problemático:
-
 ```python
 x = 0.0
 for i in range(10):
@@ -350,46 +595,41 @@ else:
 ```
 
 Resultado esperado:
-
 ```python
 x != 1.0
 ```
-
 Aunque en teoría 0.1 * 10 = 1.0, al intentar representarlo en una computadora en base binaria, se obtiene una pequeña imprecisión: 0.999999999999.
 
 **¿Por qué no se representan de manera exacta?**
 
 En las computadoras, los números flotantes no se pueden representar con total precisión. Esto ocurre porque algunos valores, como 0.1, no tienen una representación exacta en binario debido a las limitaciones de la cantidad de dígitos significativos que pueden ser almacenados.
 
-### 4.1 Representación binaria 🔢
+Representación binaria:
 - Cómo funciona: Los números se representan como secuencias de 0s y 1s en binario.
 - El problema: Algunos números decimales no pueden ser representados exactamente en este formato.
 
-**Ejemplos:**
+Ejemplos:
 - El número 0.625 tiene una representación exacta en binario: 101 * 2**-3.
 - Sin embargo, 0.1 no puede representarse de forma precisa. En su lugar, se aproxima a un valor cercano, lo que genera un error de representación.
 
----
-### 4.2 Precisión en Python 🐍
+Precisión en Python :
 Python utiliza 53 bits de precisión para manejar números flotantes en la mayoría de las implementaciones modernas.
 Esto significa que números como 0.1 son extremadamente cercanos a su valor real, pero nunca exactamente iguales.
-Ejemplo de resultado inesperado:
 
+Ejemplo de resultado inesperado:
 ```python
 0.1000000000000000055511151231257827021181583404541015625
 ```
-
-### 4.3 Buenas prácticas para trabajar con flotantes ✅
+Buenas prácticas para trabajar con flotantes
 Debido a estas imprecisiones, no compares números flotantes con el operador ==. En su lugar, utiliza comparaciones aproximadas.
 
-**Ejemplo:**
-
+Ejemplo:
 ```python
 abs(x - 1.0) < 1e-9  # Verifica si la diferencia es lo suficientemente pequeña
 ```
 ---
-## 🔍5 Algoritmos de Búsqueda
-### 5.1 Enumeración Exhaustiva 🕵️‍♂️
+##  Algoritmos de Búsqueda
+###  Enumeración Exhaustiva
 - También conocido como "adivina y verifica", este método enumera todas las posibilidades.
 - Es uno de los primeros algoritmos que debes probar.
 
@@ -420,7 +660,7 @@ else:
     print(f"{target} does not have an exact square root")
 ```
 
-### 5.2 Aproximación de Soluciones 📏
+### Aproximación de Soluciones 📏
 - Similar a la enumeración exhaustiva, pero no requiere una respuesta exacta.
 - Podemos aproximar soluciones con un margen de error llamado epsilon.
 - Epsilon es la diferencia entre la realidad y la solución. Cuanto más pequeño sea epsilon, más nos acercaremos a la solución, pero se requerirá más procesamiento.
@@ -457,7 +697,7 @@ if __name__ == '__main__':
     find_square_root(number)
 ```
 
-### 5.3 Búsqueda Binaria 🔎
+### Búsqueda Binaria 🔎
 - Requiere que el conjunto de números esté ordenado (ej. [1, 2, 3, 4, ...]).
 - Es altamente eficiente, ya que reduce el espacio de búsqueda a la mitad en cada iteración.
 
@@ -495,87 +735,8 @@ if __name__ == '__main__':
     number = int(input('Choose a number: '))
     find_binary_root(number)
 ```
-
 ---
-## 🛠 6 Funciones
-### 6.1 Abstracción 🧠
-No necesitas saber cómo se implementa algo, solo cómo manejarlo.
-
-### 6.2 Descomposición 🧩
-Permite dividir el código en componentes que colaboran entre sí. Piensa en mini programas que juntos forman un programa mayor.
-
-### 6.3 Recursividad 🔄
-- Definición algorítmica: Utiliza el enfoque "divide y vencerás". Encuentra una solución base y luego itera para resolver el problema.
-- Definición programática: Una función que se llama a sí misma.
-
-Ejemplo: Factoriales
-```python
-def factorial(n):
-    if n == 0:
-        return 1
-    return n * factorial(n - 1)
-```
-Ejemplo: Fibonacci
-
-```python
-def fibonacci(n):
-    if n == 0 or n == 1:
-        return 1
-    return fibonacci(n - 1) + fibonacci(n - 2)
-```
-
-### 6.4 Funciones como Objetos 🎯
-- En Python, las funciones son "ciudadanos de primera clase". Esto significa que:
-- Tienen un tipo.
-- Se pueden pasar como argumentos a otras funciones.
-- Se pueden usar en expresiones.
-- Se pueden incluir en estructuras de datos como listas, tuplas, diccionarios, etc.
-
-Ejemplo: Pasar funciones como argumentos
-
-```python
-def multiply_by_two(n):
-    return n * 2
-
-def add_two(n):
-    return n + 2
-
-def apply_operation(f, numbers):
-    results = []
-    for number in numbers:
-        results.append(f(number))
-    return results
-
-nums = [1, 2, 3]
-print(apply_operation(multiply_by_two, nums))  # [2, 4, 6]
-print(apply_operation(add_two, nums))  # [3, 4, 5]
-```
-
-Funciones Lambda
-
-```python
-add = lambda x, y: x + y
-print(add(2, 3))  # 5
-```
-
----
-## 7 Tuplas 📦
-Las tuplas son secuencias inmutables de objetos. Pueden contener cualquier tipo de objeto y se utilizan para devolver múltiples valores en una función.
-
-Ejemplo:
-
-```python
-my_tuple = (1, 'dos', True)
-print(my_tuple[0])  # 1
-
-# Las tuplas son inmutables
-# my_tuple[0] = 2  # TypeError
-
-# Concatenación de tuplas
-my_other_tuple = (2, 3, 4)
-my_tuple += my_other_tuple
-print(my_tuple)  # (1, 'dos', True, 2, 3, 4)
-```
+## 
 
 ---
 ### 8 Rangos 🔢
@@ -595,22 +756,7 @@ Las listas son secuencias de objetos mutables. Es importante tener cuidado con l
 
 Ejemplo:
 
-```python
-my_list = [1, 2, 3, 4]
-my_list.append(5)
-print(my_list)  # [1, 2, 3, 4, 5]
 
-# Clonación de listas
-a = [1, 2, 3]
-b = a[:]  # Clonar usando rebanadas
-print(b)  # [1, 2, 3]
-```
-List Comprehension
-
-```python
-double = [i * 2 for i in range(10)]
-print(double)  # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
-```
 
 ---
 ## 10 Diccionarios 📚
@@ -618,14 +764,7 @@ Los diccionarios son estructuras de datos que utilizan llaves en lugar de índic
 
 Ejemplo:
 
-```python
-my_dict = {'David': 35, 'Erika': 32, 'Jaime': 50}
-print(my_dict['David'])  # 35
 
-# Iterar sobre diccionarios
-for key, value in my_dict.items():
-    print(key, value)
-```
 
 ---
 ## 11 Pruebas de Caja Negra y Caja de Cristal 🧪
