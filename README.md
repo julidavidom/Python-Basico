@@ -2,53 +2,53 @@
 ### **Bienvenido a este repositorio. Aquí comparto conceptos básicos que he adquirido en programación con Python, estos ejemplos simples pueden ser de gran utilidad en algoritmos más complejos. El material lo he adquirido  a través de cursos virtuales, bootcamps y proyectos personales.**
 ---
 
-# 🐍 PARTE 1 - Introducción al funcionamiento Python 🚀
+# PARTE 1 - Introducción al funcionamiento Python 🚀
 Aquí aprenderás cómo funciona internamente este lenguaje interpretado, sus características clave y la diferencia entre lenguajes compilados e interpretados. Además, se incluyen códigos prácticos y explicaciones claras para que puedas comprender mejor cada concepto.
 
 ---
-## 💻 1 ¿Qué es un lenguaje de programación? 
+## 1 ¿Qué es un lenguaje de programación? 
 Un lenguaje de programación es un lenguaje formal que, mediante una serie de instrucciones, permite al programador escribir un conjunto de órdenes, acciones consecutivas, datos y algoritmos para crear programas que controlen el comportamiento físico y lógico de una máquina.
 
 ---
-## 🧑‍💻 2 ¿Cómo Funciona Python?
+## 2 ¿Cómo Funciona Python?
 Python es un lenguaje interpretado, lo que significa que el código no se traduce directamente a código de máquina como en los lenguajes compilados, sino que pasa por un proceso de interpretación que lo convierte en un formato intermedio (bytecode) que la máquina puede ejecutar.
 
-### 📝 2.1 Lenguajes Compilados (Ejemplo: C++)
+### Lenguajes Compilados (Ejemplo: C++)
 Los lenguajes compilados, como C++, convierten el código fuente a código de máquina directamente mediante un proceso de compilación. Este tipo de lenguajes suelen ser más rápidos en tiempo de ejecución.
 
 ```plaintext
 C++ -----> compilador -----> código de máquina
 ```
 
-### 🔄 2.2 Lenguajes Interpretados (Ejemplo: Python)
+### Lenguajes Interpretados (Ejemplo: Python)
 En Python, el código pasa por una máquina virtual que convierte el código a un formato intermedio (bytecode), y luego lo ejecuta. Esto hace que Python sea multiplataforma y fácil de usar en diferentes sistemas operativos.
 
 ```plaintext
 Python -----> bytecode -----> máquina virtual de Python -----> ejecución
 ```
 ---
-## 🧑‍🔧 3 Preguntas Frecuentes
-### ⚡ 3.1 ¿Son los lenguajes interpretados más lentos?
+## 3 Preguntas Frecuentes
+### ¿Son los lenguajes interpretados más lentos?
 En general, sí, pero la versatilidad y facilidad de uso de Python lo hacen ideal para muchas aplicaciones como análisis de datos, machine learning y desarrollo web. En muchos casos, la diferencia en velocidad no es un factor limitante.
 
-### 🧹 3.2 ¿Qué es el Garbage Collector en Python?
+### 3.2 ¿Qué es el Garbage Collector en Python?
 Python incluye un recolector de basura que se encarga de liberar memoria automáticamente eliminando objetos no utilizados. Esto mejora la eficiencia y previene problemas de memoria.
 
-### 🗂️ 3.3 ¿Qué es la carpeta pycache?
+### 3.3 ¿Qué es la carpeta pycache?
 La carpeta pycache contiene el bytecode de los archivos Python, lo que optimiza la ejecución del código al evitar la recompilación innecesaria en ejecuciones futuras.
 
 ---
-## 🏷️ 4 ¿Qué es un objeto? 
+## 4 ¿Qué es un objeto? 
 Un objeto es un concepto, abstracción o cosa con límites bien definidos que tiene un significado dentro del problema que se está manejando.
 
 ---
-## 📁 5 Organización de los Archivos de tu Proyecto
+## 5 Organización de los Archivos de tu Proyecto
 Es esencial tener una buena organización en los proyectos Python, especialmente cuando crecen en tamaño y complejidad. Python organiza su código en módulos y paquetes.
 
-### 📦 5.1 Módulos
+### 5.1 Módulos
 Un módulo es cualquier archivo de Python .py que contiene código reutilizable. Ejemplos comunes incluyen math, random, y os.
 
-### 📂 5.2 Paquetes
+### 5.2 Paquetes
 Un paquete es una carpeta que contiene módulos y debe incluir un archivo especial llamado init.py. Este archivo indica que la carpeta es un paquete de Python.
 
 Ejemplo de estructura de proyecto:
@@ -70,14 +70,14 @@ Exploracion_espacial
 ```
 ---
 
-## 🔤 6 Tipado en Python
+## 6 Tipado en Python
 Python es un lenguaje dinámico, pero puedes utilizar anotaciones de tipado para mejorar la claridad de tu código.
 
-### 📝 6.1 Tipado Estático vs Dinámico
+### 6.1 Tipado Estático vs Dinámico
 En lenguajes estáticos como C++ o Java, debes especificar el tipo de cada variable.
 En Python, puedes declarar variables sin un tipo específico, y el tipo se asignará dinámicamente durante la ejecución.
 
-### 📏 6.2 Tipado Estático en Python
+### 6.2 Tipado Estático en Python
 Aunque Python es dinámico, desde la versión 3.5, puedes usar anotaciones de tipado para hacer el código más legible y fácil de depurar.
 
 ```python
@@ -86,7 +86,7 @@ a: int = 5
 b: str = 'Hola'
 c: bool = True
 ```
-### 🧮 6.3 Funciones con Tipado Estático
+### 6.3 Funciones con Tipado Estático
 Puedes añadir anotaciones de tipado a las funciones para definir qué tipo de datos aceptan y devuelven.
 
 ```python
@@ -95,7 +95,8 @@ def suma(a: int, b: int) -> int:
 resultado = suma(3, 4)
 print(resultado)
 ```
-### 📊 6.4 Listas y Diccionarios con Tipado Estático
+
+### 6.4 Listas y Diccionarios con Tipado Estático
 El módulo typing te permite declarar los tipados de los elementos en listas y diccionarios.
 
 ```python
@@ -110,7 +111,7 @@ usuarios: Dict[str, int] = {
     "colombia": 45
 }
 ```
-### 🔢 6.5 Tuplas con Tipado Estático
+### 6.5 Tuplas con Tipado Estático
 Las tuplas son colecciones inmutables que también pueden tener tipados definidos.
 
 ```python
@@ -120,7 +121,7 @@ from typing import Tuple
 valores: Tuple[int, float, int] = (1, 3.14, 5)
 ```
 
-### 🔗 6.6 Tipados Complejos en Python
+### 6.6 Tipados Complejos en Python
 Puedes combinar diferentes tipados utilizando el módulo typing, lo que permite crear estructuras complejas como listas de diccionarios con tuplas.
 
 ```python
@@ -133,11 +134,11 @@ coordenadas: List[Dict[str, Tuple[int, int]]] = [
 ]
 ```
 ---
-## 🔨 7 Recomendación de Herramientas
+## 7 Recomendación de Herramientas
 Aunque Python es un lenguaje de tipado dinámico, puedes usar la herramienta mypy para realizar un análisis estático de los tipados en tu código. Esto es especialmente útil para asegurarte de que los tipados son correctos antes de ejecutar el código.
 
 ---
-## 🚀 8 Ventajas del Tipado Estático
+## 8 Ventajas del Tipado Estático
 Claridad: Mejora la legibilidad del código.
 
 - Prevención de errores: Detecta problemas antes de la ejecución.
@@ -145,11 +146,27 @@ Claridad: Mejora la legibilidad del código.
 - Seguridad: Reduce la probabilidad de errores complejos que son difíciles de detectar en proyectos grandes.
 
 ---
-# PARTE 2 - Guía de Conceptos de Programación 📚
+# PARTE 2 - Guía de Conceptos de Programación 
 En esta sección, encontrarás un recorrido completo por los conceptos esenciales de la programación en Python. Desde los tipos de datos y operaciones matemáticas hasta estructuras de control e iteraciones, este material está diseñado tanto para principiantes como para programadores que deseen reforzar sus conocimientos. Todos los códigos están comentados para facilitar su comprensión y aplicación en proyectos reales.
 
 ---
-## 1 Tipos de datos básicos en programación 🧮
+## 1 Variables en python
+Las variables son fundamentales en cualquier lenguaje de programación. En Python, una variable es un nombre que hace referencia a un valor almacenado en la memoria de la computadora. A diferencia de otros lenguajes, en Python no necesitas declarar el tipo de variable explícitamente - el intérprete infiere el tipo basado en el valor asignado.
+
+### Reglas importantes para nombrar variables:
+- Deben comenzar con una letra (a-z, A-Z) o guión bajo (_)
+- No pueden comenzar con un número.
+- Son case-sensitive: edad, Edad y EDAD son variables diferentes.
+- No pueden ser palabras reservadas del lenguaje (if, for, while, etc.)
+
+Definicion de variables: 
+```python
+nombre = "Juan"
+edad = 25
+saldo_actual = 1000.50
+```
+
+## 2 Tipos de datos básicos en programación 
 Los tipos de datos más comunes son:
 
 - **int**: Números enteros.
@@ -157,7 +174,7 @@ Los tipos de datos más comunes son:
 - **bool**: Valores booleanos (True o False).
 - **str**: Cadenas de texto.
 
-Ejemplo de definición de variables:
+### Ejemplo de definición de variables:
 ```python
 my_int = 1
 my_float = 1.0
@@ -165,7 +182,7 @@ my_bool = True
 my_none = None
 my_str = "Hola"
 ```
-Imprimiendo el tipo de una variable:
+### Imprimiendo el tipo de una variable:
 
 ```python
 print(type(my_int))   # <class 'int'>
@@ -174,25 +191,134 @@ print(type(my_bool))  # <class 'bool'>
 print(type(my_none))  # <class 'NoneType'>
 print(type(my_str))   # <class 'str'>
 ```
-
+Convirtiendo el tipo de dato:
+```python
+int("10")  # 10
+float(3)  # 3.0
+str(123)  # "123"
+bool(1)  # True
+bool(0)  # False
+```
 ---
-## 2 Operaciones básicas en Python ➗
-Operaciones matemáticas comunes:
+## 3 Operaciones básicas en Python 
+Las operaciones en python pueden ser aritméticas, de comparacacion, logicas y de pertenencia. Algunos ejemplos son: 
 
 ```python
-1 + 1      # Resultado: 2
-2 - 5      # Resultado: -3
-2.0 * 3    # Resultado: 6.0
-6 // 2     # Resultado: 3
-6 // 4     # Resultado: 1
-6 / 4      # Resultado: 1.5
-7 % 2      # Resultado: 1
-2 ** 2     # Resultado: 4
-```
+# Aritméticos
+suma = 5 + 3       # 8
+resta = 10 - 2     # 8
+multiplicacion = 4 * 2  # 8
+division = 16 / 2  # 8.0
+division_entera = 17 // 2  # 8
+residuo = 17 % 2    # 1
+potencia = 2 ** 3  # 8
 
+# Comparación
+igual = (5 == 5)        # True
+diferente = (5 != 3)    # True
+mayor = (10 > 5)        # True
+menor_igual = (5 <= 5)  # True
+
+# Lógicos
+y_logico = (True and False)  # False
+o_logico = (True or False)   # True
+negacion = not True          # False
+
+# Pertenencia
+en_lista = (3 in [1, 2, 3])  # True
+no_en_lista = (4 not in [1, 2, 3])  # True
+```
 ---
-## 3 Iteraciones en Python 🔁
+## 4 Condicionales en Python
+Las estructuras condicionales permiten controlar el flujo del programa basado en condiciones. Las mas basicas son if y else.
+
+```python
+if condición:
+    # código a ejecutar si la condición es verdadera
+else:
+    # código a ejecutar si la condición es falsa
+```
+También existe elif (else if) para múltiples condiciones:
+
+```python
+if edad < 13:
+    print("Niño")
+elif edad < 18:
+    print("Adolescente")
+elif edad < 65:
+    print("Adulto")
+else:
+    print("Adulto mayor")
+```
+Las condiciones pueden ser más complejas usando operadores lógicos (and, or, not):
+
+```python
+tiene_licencia = True
+if edad >= 18 and tiene_licencia:
+    print("Puede conducir")
+```
+---
+## 6 Strings
+Los strings son secuencias de caracteres  con formato Unicode. Python ofrece muchos métodos para manipularlos:
+
+Métodos útiles:
+
+```plaintext
+upper():               convierte todo a mayúsculas
+lower():               convierte todo a minúsculas
+capitalize():          primera letra en mayúscula, resto en minúscula
+title():               cada palabra comienza con mayúscula
+strip():               elimina espacios en blanco al inicio y final
+replace(old, new):     reemplaza subcadenas
+split():               divide el string en una lista
+join():                une elementos de una lista en un string
+find():                busca una subcadena y devuelve su posición
+len():                 devuelve la longitud
+```
+Un emplo puede ser: 
+
+```python
+texto = "   Python es genial   "
+print(texto.strip())  # "Python es genial"
+print(texto.replace("genial", "poderoso"))  # "   Python es poderoso   "
+print(len(texto))  # 21 (incluye los espacios)
+```
+## 7 Slices
+Los slices permiten extraer partes de secuencias (strings, listas, tuplas). La sintaxis es ```plaintext[inicio:fin:paso]```, donde:
+
+- inicio: índice donde comienza 
+- fin: índice donde termina
+- paso: cada cuántos elementos obtiene datos
+  
+Características importantes:
+
+- Los índices pueden ser negativos (cuentan desde el final)
+- Si se omite inicio, comienza desde el principio
+- Si se omite fin, va hasta el final
+
+Un paso negativo recorre la secuencia en reversa
+
+Ejemplos avanzados:
+
+python
+Copy
+texto = "Programación en Python"
+
+# Primeras 5 letras
+print(texto[:5])  # "Progr"
+
+# Cada segunda letra
+print(texto[::2])  # "Pormcó nPto"
+
+# Invertir el string
+print(texto[::-1])  # "nohtyP ne nóicamargorP"
+
+# Últimas 6 letras
+print(texto[-6:])  # "Python"
+
+## 3 Iteraciones en Python 
 Las iteraciones nos permiten repetir un proceso varias veces. Son fundamentales en la programación para realizar tareas repetitivas.
+Estructura básica:
 
 ### 3.1 Puntos clave:
 - Las iteraciones se pueden anidar (escribir iteraciones dentro de otras).
