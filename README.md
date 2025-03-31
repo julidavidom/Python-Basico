@@ -1,16 +1,10 @@
-
-Bienvenido a este repositorio. Aquí comparto conceptos básicos que he adquirido en programación con Python, estos ejemplos simples pueden ser de gran utilidad en algoritmos más complejos. El material lo he adquirido  a través de cursos virtuales, bootcamps y proyectos personales.
----
-
 # PARTE 1 - Introducción al funcionamiento Python 
 Aquí aprenderás cómo funciona internamente este lenguaje interpretado, sus características clave y la diferencia entre lenguajes compilados e interpretados. Además, se incluyen códigos prácticos y explicaciones claras para que puedas comprender mejor cada concepto.
 
----
-## 1 ¿Qué es un lenguaje de programación? 
+## ¿Qué es un lenguaje de programación? 
 Un lenguaje de programación es un lenguaje formal que, mediante una serie de instrucciones, permite al programador escribir un conjunto de órdenes, acciones consecutivas, datos y algoritmos para crear programas que controlen el comportamiento físico y lógico de una máquina.
 
----
-## 2 ¿Cómo Funciona Python?
+## ¿Cómo Funciona Python?
 Python es un lenguaje interpretado, lo que significa que el código no se traduce directamente a código de máquina como en los lenguajes compilados, sino que pasa por un proceso de interpretación que lo convierte en un formato intermedio (bytecode) que la máquina puede ejecutar.
 
 ### Lenguajes Compilados (Ejemplo: C++)
@@ -26,29 +20,26 @@ En Python, el código pasa por una máquina virtual que convierte el código a u
 ```plaintext
 Python -----> bytecode -----> máquina virtual de Python -----> ejecución
 ```
----
-## 3 Preguntas Frecuentes
+## Preguntas Frecuentes
 ### ¿Son los lenguajes interpretados más lentos?
 En general, sí, pero la versatilidad y facilidad de uso de Python lo hacen ideal para muchas aplicaciones como análisis de datos, machine learning y desarrollo web. En muchos casos, la diferencia en velocidad no es un factor limitante.
 
-### 3.2 ¿Qué es el Garbage Collector en Python?
+### ¿Qué es el Garbage Collector en Python?
 Python incluye un recolector de basura que se encarga de liberar memoria automáticamente eliminando objetos no utilizados. Esto mejora la eficiencia y previene problemas de memoria.
 
-### 3.3 ¿Qué es la carpeta pycache?
+### ¿Qué es la carpeta pycache?
 La carpeta pycache contiene el bytecode de los archivos Python, lo que optimiza la ejecución del código al evitar la recompilación innecesaria en ejecuciones futuras.
 
----
-## 4 ¿Qué es un objeto? 
+## ¿Qué es un objeto? 
 Un objeto es un concepto, abstracción o cosa con límites bien definidos que tiene un significado dentro del problema que se está manejando.
 
----
-## 5 Organización de los Archivos de tu Proyecto
+## Organización de los Archivos de tu Proyecto
 Es esencial tener una buena organización en los proyectos Python, especialmente cuando crecen en tamaño y complejidad. Python organiza su código en módulos y paquetes.
 
-### 5.1 Módulos
+### Módulos
 Un módulo es cualquier archivo de Python .py que contiene código reutilizable. Ejemplos comunes incluyen math, random, y os.
 
-### 5.2 Paquetes
+### Paquetes
 Un paquete es una carpeta que contiene módulos y debe incluir un archivo especial llamado init.py. Este archivo indica que la carpeta es un paquete de Python.
 
 Ejemplo de estructura de proyecto:
@@ -70,14 +61,14 @@ Exploracion_espacial
 ```
 ---
 
-## 6 Tipado en Python
+## Tipado en Python
 Python es un lenguaje dinámico, pero puedes utilizar anotaciones de tipado para mejorar la claridad de tu código.
 
-### 6.1 Tipado Estático vs Dinámico
+### Tipado Estático vs Dinámico
 En lenguajes estáticos como C++ o Java, debes especificar el tipo de cada variable.
 En Python, puedes declarar variables sin un tipo específico, y el tipo se asignará dinámicamente durante la ejecución.
 
-### 6.2 Tipado Estático en Python
+### Tipado Estático en Python
 Aunque Python es dinámico, desde la versión 3.5, puedes usar anotaciones de tipado para hacer el código más legible y fácil de depurar.
 
 ```python
@@ -86,7 +77,7 @@ a: int = 5
 b: str = 'Hola'
 c: bool = True
 ```
-### 6.3 Funciones con Tipado Estático
+### Funciones con Tipado Estático
 Puedes añadir anotaciones de tipado a las funciones para definir qué tipo de datos aceptan y devuelven.
 
 ```python
@@ -95,8 +86,7 @@ def suma(a: int, b: int) -> int:
 resultado = suma(3, 4)
 print(resultado)
 ```
-
-### 6.4 Listas y Diccionarios con Tipado Estático
+### Listas y Diccionarios con Tipado Estático
 El módulo typing te permite declarar los tipados de los elementos en listas y diccionarios.
 
 ```python
@@ -111,7 +101,7 @@ usuarios: Dict[str, int] = {
     "colombia": 45
 }
 ```
-### 6.5 Tuplas con Tipado Estático
+### Tuplas con Tipado Estático
 Las tuplas son colecciones inmutables que también pueden tener tipados definidos.
 
 ```python
@@ -121,7 +111,7 @@ from typing import Tuple
 valores: Tuple[int, float, int] = (1, 3.14, 5)
 ```
 
-### 6.6 Tipados Complejos en Python
+### Tipados Complejos en Python
 Puedes combinar diferentes tipados utilizando el módulo typing, lo que permite crear estructuras complejas como listas de diccionarios con tuplas.
 
 ```python
@@ -133,24 +123,21 @@ coordenadas: List[Dict[str, Tuple[int, int]]] = [
     {"coord1": (0, 1), "coord2": (2, 5)}
 ]
 ```
----
-## 7 Recomendación de Herramientas
+## Recomendación de Herramientas
 Aunque Python es un lenguaje de tipado dinámico, puedes usar la herramienta mypy para realizar un análisis estático de los tipados en tu código. Esto es especialmente útil para asegurarte de que los tipados son correctos antes de ejecutar el código.
 
----
-## 8 Ventajas del Tipado Estático
+## Ventajas del Tipado Estático
 Claridad: Mejora la legibilidad del código.
 
 - Prevención de errores: Detecta problemas antes de la ejecución.
 - Colaboración: Facilita el trabajo en equipos de desarrollo grandes.
 - Seguridad: Reduce la probabilidad de errores complejos que son difíciles de detectar en proyectos grandes.
+--- 
 
----
 # PARTE 2 - Guía de Conceptos de Programación 
 En esta sección, encontrarás un recorrido completo por los conceptos esenciales de la programación en Python. Desde los tipos de datos y operaciones matemáticas hasta estructuras de control e iteraciones, este material está diseñado tanto para principiantes como para programadores que deseen reforzar sus conocimientos. Todos los códigos están comentados para facilitar su comprensión y aplicación en proyectos reales.
 
----
-## 1 Variables en python
+## Variables en python
 Las variables son fundamentales en cualquier lenguaje de programación. En Python, una variable es un nombre que hace referencia a un valor almacenado en la memoria de la computadora. A diferencia de otros lenguajes, en Python no necesitas declarar el tipo de variable explícitamente - el intérprete infiere el tipo basado en el valor asignado.
 
 ### Reglas importantes para nombrar variables:
@@ -166,7 +153,7 @@ edad = 25
 saldo_actual = 1000.50
 ```
 
-## 2 Tipos de datos básicos en programación 
+## Tipos de datos básicos en programación 
 Los tipos de datos más comunes son:
 
 - **int**: Números enteros.
@@ -198,8 +185,7 @@ str(123)  # "123"
 bool(1)  # True
 bool(0)  # False
 ```
----
-## 3 Operaciones básicas en Python 
+## Operaciones básicas en Python 
 Las operaciones en python pueden ser aritméticas, de comparacacion, logicas y de pertenencia. Algunos ejemplos son: 
 
 ```python
@@ -227,8 +213,7 @@ negacion = not True          # False
 en_lista = (3 in [1, 2, 3])  # True
 no_en_lista = (4 not in [1, 2, 3])  # True
 ```
----
-## 4 Condicionales en Python
+## Condicionales en Python
 Las estructuras condicionales permiten controlar el flujo del programa basado en condiciones. Las mas basicas son if y else.
 
 ```python
@@ -256,8 +241,7 @@ tiene_licencia = True
 if edad >= 18 and tiene_licencia:
     print("Puede conducir")
 ```
----
-## 6 Strings
+## Strings
 Los strings son secuencias de caracteres  con formato Unicode. Python ofrece muchos métodos para manipularlos:
 
 Métodos útiles:
@@ -280,8 +264,7 @@ print(texto.strip())  # "Python es genial"
 print(texto.replace("genial", "poderoso"))  # "   Python es poderoso   "
 print(len(texto))  # 21 (incluye los espacios)
 ```
----
-## 7 Slices
+## Slices
 Los slices permiten extraer partes de secuencias en objetos como strings, listas, tuplas. La sintaxis es ```[inicio:fin:paso]```, donde:
 
 - inicio: índice donde comienza 
@@ -311,7 +294,7 @@ print(texto[::-1])  # "nohtyP ne nóicamargorP"
 # Últimas 6 letras
 print(texto[-6:])  # "Python"
 ```
-## 8 Iteraciones en Python 
+## Iteraciones en Python 
 Las iteraciones nos permiten repetir un proceso varias veces. Son fundamentales en la programación para realizar tareas repetitivas.
 Estructura básica:
 
@@ -327,8 +310,16 @@ while contador < 10:
     print(contador)
     contador = contador +1
 ```
----
-## 9 Bucles
+##  Rangos 
+Los rangos representan una secuencia de enteros. Son inmutables y muy eficientes en términos de memoria.
+
+Ejemplo:
+```python
+my_range = range(0, 7, 2)
+for i in my_range:
+    print(i)  # 0, 2, 4, 6
+```
+## Bucles
 Los bucles permiten ejecutar código repetidamente. Python tiene dos tipos principales:
 
 ### Bucle while
@@ -370,8 +361,8 @@ for i in range(3):  # 0, 1, 2
 for indice, fruta in enumerate(frutas):
     print(f"{indice}: {fruta}")
 ```
----
-## 10 Listas
+
+## Listas
 Las listas son colecciones ordenadas y mutables de elementos. Pueden contener diferentes tipos de datos.
 
 ### Operaciones principales:
@@ -424,8 +415,7 @@ sub_lista = combinada[1:3]  # [2, 3]
 double = [i * 2 for i in range(10)]
 print(double)  # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
 ```
----
-## 11 Tuplas
+## Tuplas
 Las tuplas son similares a las listas pero son inmutables (no se pueden modificar después de creadas). Son más eficientes en memoria y tiempo de ejecución.
 
 Sintaxis:
@@ -455,8 +445,7 @@ my_other_tuple = (2, 3, 4)
 my_tuple += my_other_tuple
 print(my_tuple)  # (1, 'dos', True, 2, 3, 4)
 ```
----
-## 12 Diccionarios
+## Diccionarios
 Los diccionarios almacenan pares clave-valor. Son mutables y no mantienen un orden.
 
 Sintaxis básica:
@@ -520,7 +509,7 @@ for key, value in my_dict.items():
     print(key, value)
 ```
 
-## 13 Funciones
+## Funciones
 ### Abstracción 
 No necesitas saber cómo se implementa algo, solo cómo manejarlo.
 
@@ -548,7 +537,7 @@ def fibonacci(n):
 ```
 
 ### Funciones como Objetos
-- En Python, las funciones son "ciudadanos de primera clase". Esto significa que:
+En Python, las funciones son "ciudadanos de primera clase". Esto significa que:
 - Tienen un tipo.
 - Se pueden pasar como argumentos a otras funciones.
 - Se pueden usar en expresiones.
@@ -578,8 +567,26 @@ print(apply_operation(add_two, nums))  # [3, 4, 5]
 add = lambda x, y: x + y
 print(add(2, 3))  # 5
 ```
+
+## Excepciones
+Las excepciones son comunes en programación y se utilizan para manejar errores.
+
+Manejo de Excepciones
+```python
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Error: División por cero")
+finally:
+    print("Finalizado")
+```
+
+Crear Excepciones Personalizadas
+```python
+raise ValueError("Este es un error personalizado")
+```
 ---
-# Representación de números flotantes en Python
+# PARTE 3 - Representación de números flotantes en Python
 La representación de números flotantes (tipo float) en Python y otras computadoras puede ser sorprendentemente inexacta debido a la forma en que se manejan internamente.
 
 Ejemplo problemático:
@@ -628,17 +635,15 @@ Ejemplo:
 abs(x - 1.0) < 1e-9  # Verifica si la diferencia es lo suficientemente pequeña
 ```
 ---
-##  Algoritmos de Búsqueda
-###  Enumeración Exhaustiva
+# PARTE 4 - Algoritmos de Búsqueda
+## Enumeración Exhaustiva
 - También conocido como "adivina y verifica", este método enumera todas las posibilidades.
 - Es uno de los primeros algoritmos que debes probar.
 
 Ejemplo de código:
-
 ```python
 """
 Este programa implementa el método de Enumeración Exhaustiva para encontrar la raíz cuadrada exacta de un número entero.
-
 Conceptos básicos en Python:
 - Uso de variables y entrada de usuario (`input`, `int`)
 - Bucle `while` para iteración controlada
@@ -660,7 +665,7 @@ else:
     print(f"{target} does not have an exact square root")
 ```
 
-### Aproximación de Soluciones 📏
+### Aproximación de Soluciones 
 - Similar a la enumeración exhaustiva, pero no requiere una respuesta exacta.
 - Podemos aproximar soluciones con un margen de error llamado epsilon.
 - Epsilon es la diferencia entre la realidad y la solución. Cuanto más pequeño sea epsilon, más nos acercaremos a la solución, pero se requerirá más procesamiento.
@@ -697,12 +702,11 @@ if __name__ == '__main__':
     find_square_root(number)
 ```
 
-### Búsqueda Binaria 🔎
+### Búsqueda Binaria 
 - Requiere que el conjunto de números esté ordenado (ej. [1, 2, 3, 4, ...]).
 - Es altamente eficiente, ya que reduce el espacio de búsqueda a la mitad en cada iteración.
 
 Ejemplo de código:
-
 ```python
 """
 Este programa calcula la raíz cuadrada de un número utilizando el método de búsqueda binaria.
@@ -736,147 +740,11 @@ if __name__ == '__main__':
     find_binary_root(number)
 ```
 ---
-## 
-
----
-### 8 Rangos 🔢
-Los rangos representan una secuencia de enteros. Son inmutables y muy eficientes en términos de memoria.
-
-Ejemplo:
-
-```python
-my_range = range(0, 7, 2)
-for i in my_range:
-    print(i)  # 0, 2, 4, 6
-```
-
----
-## 9 Listas y Mutabilidad 📝
-Las listas son secuencias de objetos mutables. Es importante tener cuidado con los efectos secundarios al modificar listas.
-
-Ejemplo:
-
-
-
----
-## 10 Diccionarios 📚
-Los diccionarios son estructuras de datos que utilizan llaves en lugar de índices. Son mutables y no tienen un orden interno.
-
-Ejemplo:
-
-
-
----
-## 11 Pruebas de Caja Negra y Caja de Cristal 🧪
-### 11.1 Pruebas de Caja Negra 🖤
-- Se basan en la especificación de la función o programa.
-- Prueban inputs y validan outputs.
-- Unit Testing: Pruebas unitarias para cada función.
-- Integration Testing: Pruebas de integración entre módulos.
-
-Ejemplo de código:
-
-```python
-"""
-Este programa implementa una función para sumar dos números y la valida mediante pruebas unitarias con `unittest`.
-
-Conceptos básicos en Python:
-- Definición y uso de funciones (`def`)
-- Operaciones aritméticas (`+`)
-- Implementación de pruebas unitarias (`unittest`)
-- Métodos de aserción (`assertEqual`) para verificar resultados esperados
-"""
-
-import unittest
-
-def add(num_1, num_2):
-    """Returns the sum of two numbers."""
-    return num_1 + num_2
-
-class BlackBoxTest(unittest.TestCase):
-    """Unit tests for the `add` function."""
-
-    def test_add_two_positives(self):
-        """Checks the sum of two positive numbers."""
-        result = add(10, 5)
-        self.assertEqual(result, 15)
-
-    def test_add_two_negatives(self):
-        """Checks the sum of two negative numbers."""
-        result = add(-10, -7)
-        self.assertEqual(result, -17)
-
-if __name__ == "__main__":
-    unittest.main()
-```
-### 11.2 Pruebas de Caja de Cristal 💎
-- Se basan en el flujo del programa.
-- Prueban todos los caminos posibles, incluyendo ramificaciones, bucles y recursión.
-- Regression Testing: Pruebas de regresión para detectar problemas después de cambios.
-
-Ejemplo de código:
-
-```python
-"""
-Este programa evalúa si una persona es mayor de edad utilizando una función y pruebas unitarias con `unittest`.
-
-Conceptos básicos en Python:
-- Uso de funciones con `return`
-- Comparaciones lógicas (`>=`)
-- Implementación de pruebas unitarias con `unittest`
-- Métodos de aserción (`assertEqual`) para validar resultados esperados
-"""
-
-import unittest
-
-def is_adult(age):
-    """Returns True if the age is 18 or older, False otherwise."""
-    return age >= 18  # Simplification of the condition
-
-class CrystalTest(unittest.TestCase):
-    """Set of tests to validate the `is_adult` function."""
-
-    def test_is_adult(self):
-        age = 20
-        result = is_adult(age)
-        self.assertEqual(result, True)  # Checks if it returns True
-
-    def test_is_minor(self):
-        age = 15
-        result = is_adult(age)
-        self.assertEqual(result, False)  # Checks if it returns False
-
-if __name__ == "__main__":
-    unittest.main()
-```
-
----
-## 12 Excepciones 🚨
-Las excepciones son comunes en programación y se utilizan para manejar errores.
-
-Manejo de Excepciones
-
-```python
-try:
-    result = 10 / 0
-except ZeroDivisionError:
-    print("Error: División por cero")
-finally:
-    print("Finalizado")
-```
-
-Crear Excepciones Personalizadas
-
-```python
-raise ValueError("Este es un error personalizado")
-```
-
----
-# PARTE 3 - Algoritmos de Menor a Mayor Complejidad 📊
+# PARTE 4 - Algoritmos de Menor a Mayor Complejidad
 En esta sección, se presentan los algoritmos proporcionados, ordenados de menor a mayor complejidad, con el objetivo de que el lector entienda cómo cada programa contribuye al aprendizaje de Python básico
 
 ---
-### 1 break_continue.py 🔄
+### 1 break_continue.py 
 Este script demuestra el uso de estructuras de control en Python, como bucles `for`,`break` y `continue`.
 
 El código imprime 'NA' 12 veces y luego 'HEY JUDE'.
@@ -894,7 +762,7 @@ if __name__ == '__main__':
 ```
 
 ---
-### 2 conditionals.py 🔄
+### 2 conditionals.py 
 Programa que evalúa si un número ingresado por el usuario es mayor, menor o igual a 5.
 Este ejemplo introduce la estructura condicional **if-elif-else** en Python.
 
@@ -912,7 +780,7 @@ else:
 ```
 
 ---
-### 3 converter.py 💱
+### 3 converter.py 
 Convierte una cantidad de pesos colombianos a dólares según una tasa de cambio fija. Introduce el manejo de entrada de usuario y operaciones aritméticas.
 
 ```python
@@ -927,7 +795,7 @@ if __name__ == '__main__':
 ```
 
 ---
-### 4 dictionaries.py 📚
+### 4 dictionaries.py 
 Muestra cómo definir un diccionario, acceder a sus valores y recorrerlo con un bucle. Es útil para entender estructuras de datos clave-valor.
 
 ```python
@@ -948,7 +816,7 @@ if __name__ == '__main__':
 
 ```
 ---
-### 5 for.py 🔁
+### 5 for.py 
 Ejemplo de uso de bucles for y while. Introduce la función range() y cómo generar listas con ella.
 
 ```python
@@ -972,7 +840,7 @@ for i in range(10):
 ```
 
 ---
-### 6 game.py 🎮
+### 6 game.py 
 Este programa es un simple juego de adivinanza en el que el usuario debe adivinar un número aleatorio generado por el programa.
 
 Conceptos básicos de Python aplicados:
@@ -998,7 +866,7 @@ def run():
 ```
 
 ---
-### 7 loops.py 🔄
+### 7 loops.py
 Calcula y muestra las potencias de 2 hasta alcanzar un límite específico. Introduce el uso de bucles while y operaciones matemáticas.
 
 ```python
@@ -1018,7 +886,7 @@ if __name__ == '__main__':
 ```
 
 ---
-### 8 palindrome.py 🔄
+### 8 palindrome.py
 Verifica si una palabra o frase es un palíndromo. Introduce el manejo de cadenas y operaciones de slicing.
 
 ```python
@@ -1044,7 +912,7 @@ if __name__ == '__main__':
 ```
 
 ---
-### 9 password.py 🔒
+### 9 password.py 
 Genera una contraseña aleatoria de 15 caracteres. Introduce el uso de listas, bucles for y la función random.choice.
 
 ```python
@@ -1083,7 +951,7 @@ if __name__ == '__main__':
 
 ```
 ---
-### 10 prime_number.py 🔢
+### 10 prime_number.py 
 Este programa verifica si un número es primo .
 Un numero es primo cuando el residuo de la divicion es 0 solo cuando se divide entre uno, y entre el mismo numero.
 
@@ -1121,7 +989,7 @@ if __name__ == "__main__":
 
 ```
 ---
-### 11 recorrer_cadena.py 🔄
+### 11 recorrer_cadena.py 
 Este programa toma una frase ingresada por el usuario y convierte cada carácter a mayúsculas.
 
 - Iteración sobre cadenas con un bucle for.
@@ -1137,7 +1005,7 @@ if __name__ == "__main__":
     run()
 ```
 
-### 12 aproximacion.py 📏
+### 12 aproximacion.py 
 Este programa encuentra la raíz cuadrada de un número usando aproximaciones sucesivas.
 Si el número no tiene una raíz exacta, se devuelve una aproximación con un margen de error (epsilon).
 
@@ -1166,7 +1034,7 @@ if __name__ == '__main__':
     find_square_root(number)
 ```
 ---
-### 13 busqueda_binaria.py 🔎
+### 13 busqueda_binaria.py 
 Este programa calcula la raíz cuadrada de un número utilizando el método de búsqueda binaria. Si la raíz no es exacta, devuelve una aproximación con un margen de error (`epsilon`).
 
 Conceptos básicos en Python:
@@ -1197,7 +1065,7 @@ if __name__ == '__main__':
     find_binary_root(number)
 ```
 ---
-### 14 enumeracion_exhaustiva.py 🔍
+### 14 enumeracion_exhaustiva.py 
 Este programa implementa el método de Enumeración Exhaustiva para encontrar la raíz cuadrada exacta de un número entero.
 
 Conceptos básicos en Python:
@@ -1221,7 +1089,7 @@ else:
     print(f"{target} does not have an exact square root")
 ```
 ---
-### 15 excepciones.py 🚨
+### 15 excepciones.py 
 Manejo de excepciones en Python con `try-except`.
 
 Conceptos básicos abordados:
@@ -1243,7 +1111,7 @@ divisor = 0  # Error case (division by zero)
 print(divide_list_elements(lst, divisor))
 ```
 ---
-### 16 factorial.py 🔢
+### 16 factorial.py 
 Cálculo del factorial de un número usando recursividad. Introduce el concepto de recursividad.
 
 ```python
@@ -1257,7 +1125,7 @@ n = int(input("Escribe un entero positivo: "))
 print(f"El factorial de {n} es {factorial(n)}")
 ```
 ---
-### 17 iteraciones.py 🔄
+### 17 iteraciones.py 
 Este programa demuestra el uso de bucles anidados en Python mediante un contador de 0 a 99.
 Es ideal para aprender sobre estructuras de control, el funcionamiento de ciclos while anidados y la gestión de variables de control en iteraciones.
 
@@ -1276,7 +1144,7 @@ while outer_counter < 10:
     inner_counter = 0   # Resets the inner counter
 ```
 ---
-### 18 tres_metodos_numericos.py 📊
+### 18 tres_metodos_numericos.py 
 Implementa tres métodos para calcular la raíz cuadrada de un número: enumeración exhaustiva, aproximación y búsqueda binaria. Introduce diferentes enfoques para resolver un problema.
 
 ```python
@@ -1350,7 +1218,7 @@ if __name__ == "__main__":
     run()
 ```
 
-# 📝 Fuentes
+# Fuentes
 - Platzi
 - Python Documentation
 - W3Schools-
